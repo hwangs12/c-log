@@ -19,5 +19,6 @@ int main()
     /* no need for ambersand */
     scanf("%s", name);
     printf("Your name is %s \n", name);
+    /* issue with scanf is that everything after scan is ignored */
     return 0;
 }
