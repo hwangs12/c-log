@@ -26,7 +26,7 @@ int main()
     char fullname[20];
     printf("Enter your full name: ");
     /* fgets does take space included input no need for ambersand */
-    fgets(fullname, 20, stdin);
+    fgets(fullname, sizeof(fullname), stdin);
     printf("Your name is %s \n", fullname);
     /* issue with scanf is that everything after scan is ignored */
     return 0;
