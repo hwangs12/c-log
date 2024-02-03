@@ -5,6 +5,8 @@ int main(void)
 {
     int r;
 
+    void srand(unsigned int seed);
+
     do {
         r = rand() % 100; // Get a random number between 0 and 99
         printf("%d\n", r);
