@@ -6,7 +6,7 @@ int main(void)
     int r;
 
     do {
-        r = rand(); // Get a random number between 0 and 99
+        r = rand() % 100; // Get a random number between 0 and 99
         printf("%d\n", r);
     } while (r != 37);    // Repeat until 37 comes up
 }
