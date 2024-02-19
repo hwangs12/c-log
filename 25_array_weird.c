@@ -10,4 +10,7 @@ int main(void)
     { // BAD NEWS: printing too many elements!
         printf("%d\n", a[i]);
     }
+
+    // advice from beej's guide
+    // Short version: don’t do anything that causes undefined behavior. Ever
 }
