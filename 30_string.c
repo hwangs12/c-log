@@ -4,7 +4,7 @@ int main()
 {
     // string initializer as pointer vs array
     char *c = "hello kid!";
-    char v[] = "hello vid!";
+    char v[] = "hello vid!"; // it is a mutable copy of a string literal.
 
     char z[12] = "hello vid!";
 
