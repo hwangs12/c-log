@@ -9,7 +9,7 @@ int main()
     char z[12] = "hello vid!";
 
     // pointer type cannot be modified
-    // c[0] = 'c';
+    // c[0] = 'c'; this will crash the program at runtime
     v[0] = 'c';
 
     // printf("%s\n", c);
