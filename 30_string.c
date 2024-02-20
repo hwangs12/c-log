@@ -26,6 +26,7 @@ int main()
     }
     printf("%zu \n", sizeof(v)); // number of char is inclusive of '\0' terminating char.
     printf("%zu \n", sizeof(z)); // size of z is size defined in the array size.
+    printf("%zu \n", sizeof(c)); // size of c is undefined when it is initialized as pointer.
 
     return 0;
 }
