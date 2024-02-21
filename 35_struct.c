@@ -15,4 +15,7 @@ int main()
     printf("Name:      %s\n", saturn.name);
     printf("Price:     %f\n", saturn.price);
     printf("Top Speed: %d km\n", saturn.speed);
+
+    // we can be specific with the initializers
+    struct car soturn = {.speed = 175, .name = "Saturn SL/2"}; // any missing field designators are initialized to zero, pricing for example.
 }
