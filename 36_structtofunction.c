@@ -17,6 +17,12 @@ struct car
 void set_price(struct car *entity, float price)
 {
     (*entity).price = price; // dereferencing memory address type struct car
+    // entity->price = price        /* this also works. Equivalent to above */
+
+    /* RULES TO USING DOT VS ARROW */
+
+    // If you have a struct, use dot (.).
+    // If you have a pointer to a struct, use arrow (->).
 }
 
 int main(void)
