@@ -16,7 +16,7 @@ struct car
 
 void set_price(struct car *entity, float price)
 {
-    (*entity).price = price;
+    (*entity).price = price; // dereferencing memory address type struct car
 }
 
 int main(void)
