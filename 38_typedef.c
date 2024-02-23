@@ -24,7 +24,7 @@ int main()
     printf("%d \n", p1.y);
 
     /* with TYPEDEF */
-    Point p2; // you don't need struct to indicate PointType. And, you can just use alias.
+    Point p2; // you don't need struct to indicate PointType. And, notice we are using alias to indicate the PointType.
     p2.x = 44;
     p2.y = 100000;
     printf("%c \n", p2.x);
