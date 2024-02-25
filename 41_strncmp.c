@@ -12,4 +12,12 @@ int main()
     // what about 0?
     int pipi = strncmp("hallo", "hello", 0); // obviously. 0
     printf("%d\n", pipi);
+
+    // how about this?
+    int papa = strncmp("hello\0coco", "hello\0titi", 8);
+    printf("%d\n", papa); // prints 0. it's strncmp. doesn't check anything after \0.
+
+    // oh is there a way to check?
+    int pypy = memcmp("hello\0coco", "hello\0titi", 8); // notice how c is less than t.
+    printf("%d\n", pypy);                               // prints negative
 }
