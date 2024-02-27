@@ -12,9 +12,15 @@ int main()
     FILE *fp; // Variable to represent open file
 
     fp = fopen("hello.txt", "r"); // Open file for reading
-
-    int c = fgetc(fp); // Read a single character
-    printf("%c\n", c); // Print char to stdout
+    if (fp)
+    {
+        int c = fgetc(fp); // Read a single character
+        printf("%c\n", c); // Print char to stdout
+    }
+    else
+    {
+        printf("file not there");
+    }
 
     fclose(fp);
 }
