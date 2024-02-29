@@ -9,6 +9,7 @@ int main(void)
 
     fp = fopen("whales.txt", "r");
 
+    // float will take only rounded to first decimal point
     while (fscanf(fp, "%s %f %d", name, &length, &mass) != EOF)
         printf("%s whale, %d tonnes, %.1f meters\n", name, mass, length);
 
