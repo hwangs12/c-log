@@ -25,6 +25,34 @@ char screen[19][32] = {
 
 void listen_to_key_press()
 {
+    // for unix
+    system("stty raw");
+
+    while (1)
+    {
+        char c = getchar();
+        // use e to exit
+        switch (c)
+        {
+        case 'j':
+            move_to_left();
+            break;
+        case 'l':
+            move_to_right();
+            break;
+        case 'i':
+            move_up();
+            break;
+        case 'k':
+            move_down();
+            break;
+        default:
+            system("stty cooked \n");
+            exit(0);
+        }
+    }
+
+    system("stty cooked");
 }
 
 void init()
@@ -44,7 +72,7 @@ void init()
 int main()
 {
     init();
-    // listen_to_key_press();
+    listen_to_key_press();
 
     return 0;
 }
