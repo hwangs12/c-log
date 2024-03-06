@@ -48,6 +48,7 @@ void move_to_right()
             {
                 screen[i][j] = ' ';
                 screen[i][j + 1] = 'O';
+                j++;
             }
         }
     }
@@ -61,20 +62,44 @@ void move_to_left()
             if (screen[i][j] == 'O')
             {
                 screen[i][j] = ' ';
-                screen[i][j + 1] = 'O';
+                screen[i][j - 1] = 'O';
             }
         }
     }
 }
 void move_up()
 {
+    for (int i = 0; i < 19; i++)
+    {
+        for (int j = 0; j < 32; j++)
+        {
+            if (screen[i][j] == 'O')
+            {
+                screen[i][j] = ' ';
+                screen[i - 1][j] = 'O';
+            }
+        }
+    }
 }
 void move_down()
 {
+    for (int i = 0; i < 19; i++)
+    {
+        for (int j = 0; j < 32; j++)
+        {
+            if (screen[i][j] == 'O')
+            {
+                screen[i][j] = ' ';
+                screen[i + 1][j] = 'O';
+                i++;
+            }
+        }
+    }
 }
 
 void rerender()
 {
+    printf("\e[1;1H\e[2J");
     for (int i = 0; i < 19; i++)
     {
         for (int j = 0; j < 32; j++)
@@ -88,34 +113,36 @@ void rerender()
 void listen_to_key_press()
 {
     // for unix
-    system("stty raw");
 
     while (1)
     {
+        system("stty raw");
         char c = getchar();
 
         switch (c)
         {
         case 'j':
+            system("stty cooked");
             move_to_left();
             break;
         case 'l':
+            system("stty cooked");
             move_to_right();
-            rerender();
             break;
         case 'i':
+            system("stty cooked");
             move_up();
             break;
         case 'k':
+            system("stty cooked");
             move_down();
             break;
         default:
             system("stty cooked \n");
             exit(0);
         }
+        rerender();
     }
-
-    system("stty cooked");
 }
 
 void init()
