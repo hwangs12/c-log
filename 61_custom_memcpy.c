@@ -43,3 +43,5 @@ int main()
 
     // printf("%c\n", b);
 }
+
+// is copy to argument as int[] then to char* preserve the ints in the array?
