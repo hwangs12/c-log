@@ -99,6 +99,7 @@ void move_down()
 
 void rerender()
 {
+    // the issue is I can't get rid of print to see the frame
     printf("\e[1;1H\e[2J");
     for (int i = 0; i < 19; i++)
     {
