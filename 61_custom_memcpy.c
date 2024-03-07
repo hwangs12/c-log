@@ -2,7 +2,7 @@
 
 void *my_memcpy(void *dest, void *src, int byte_count)
 {
-    // Convert void*s to char*s
+    // Convert void*s to char*s. Q: how do I iterate over different types?
     char *s = src, *d = dest;
 
     // Now that we have char*s, we can dereference and copy them
@@ -18,4 +18,9 @@ void *my_memcpy(void *dest, void *src, int byte_count)
 
 int main()
 {
+    char a = 'c';
+    char b;
+    my_memcpy(&b, &a, 1);
+
+    printf("%c\n", b);
 }
