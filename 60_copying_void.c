@@ -7,7 +7,7 @@ int main()
 
     char *c = p;
 
-    // printf("%c\n", *p); // this will error out
+    // printf("%c\n", *p); <- you cannot dereference void*
     printf("%c\n", *c);
 
     // printing memory address
