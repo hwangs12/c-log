@@ -16,6 +16,12 @@ char *readline(FILE *fp)
     char *buf;
     int c;
 
+    /**
+     * another way to initialize buffer
+     * char *p = malloc(3490);
+     * char *p = realloc(NULL, 3490);
+     */
+
     buf = malloc(bufsize);
 
     if (buf == NULL)
