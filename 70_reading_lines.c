@@ -72,7 +72,7 @@ int main()
     while ((beef = readline(file)) != NULL)
     {
         printf("%s \n", beef);
-        free(beef);
+        free(beef); // since we didn't free buffer inside the function unless they are null.
     }
 
     fclose(file);
