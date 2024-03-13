@@ -1,1 +1,5 @@
-/* what is it? what is the use case? */
+/**
+ * Data Structure Alignment : How data is arranged and accessed in Computer Memory?
+ *
+ *
+ */
