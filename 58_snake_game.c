@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 char screen[19][32] = {
     {'@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@', '@'},
@@ -32,11 +33,26 @@ char screen[19][32] = {
             if (screen[i][j] == 'O')
             {
                 screen[i][j] = ' ';
-                screen[i][j + 1] = 'O';
+                screen[x][y] = 'O';
             }
         }
     }
 } */
+
+void snake_head_coordinates(int *x, int *y)
+{
+    for (int i = 0; i < 19; i++)
+    {
+        for (int j = 0; j < 32; j++)
+        {
+            if (screen[i][j] == 'O')
+            {
+                *x = i;
+                *y = j;
+            }
+        }
+    }
+}
 
 void move_to_right()
 {
@@ -97,7 +113,7 @@ void move_down()
     }
 }
 
-void rerender()
+void rerender(char key_pressed)
 {
     // the issue is I can't get rid of print to see the frame
     printf("\e[1;1H\e[2J");
@@ -110,6 +126,14 @@ void rerender()
         printf("\n");
     }
 }
+
+/* void game_over()
+{
+    if (hit_wall())
+    {
+        system_
+    }
+} */
 
 void listen_to_key_press()
 {
@@ -142,7 +166,7 @@ void listen_to_key_press()
             system("stty cooked \n");
             exit(0);
         }
-        rerender();
+        rerender(c);
     }
 }
 
