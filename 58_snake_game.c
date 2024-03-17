@@ -164,6 +164,7 @@ void listen_to_key_press()
             break;
         default:
             system("stty cooked \n");
+            fflush(stdout);
             exit(0);
         }
         rerender(c);
@@ -188,6 +189,6 @@ int main()
 {
     init();
     listen_to_key_press();
-
+    fflush(stdout);
     return 0;
 }
