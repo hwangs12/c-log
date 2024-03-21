@@ -34,3 +34,12 @@
  * -> in bin -> 10011
  * -> ieee 754 form: 1100111011001010 (sweet!)
  */
+
+/**
+ * things i don't understand yet
+ *
+ * when converting from float to a decimal representation and back to float, definitely use flt_decimal_dig (9) to do that so that all the bits are preserved exactly.
+ *
+ * what does preserving digits mean? what does converting from floatt o decimal mean?
+ *
+ */
