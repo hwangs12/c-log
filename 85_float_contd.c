@@ -16,4 +16,9 @@ int main(void)
     f += g; // 3.14159265358 is what f _should_ be
 
     printf("%.11f\n", f); // 3.14159274101 -- wrong!
+
+    /**
+     * floating point numbers can encode numbers that require more decimal places to print out completely.
+     *
+     */
 }
