@@ -19,4 +19,12 @@ int main(void)
     unsigned long int y = strtoul(k, NULL, 2);
 
     printf("%lu\n", y);  // 42
+
+    // what's with the NULL in there?
+
+    /* it helps us figure out if an error occurred in the processing of the string. it's a pointer to a pointer to a char, which sounds scary, but isn't once you wrap your head around it. */
+
+    /* let's do an example where we feed in a deliberately bad number, and we'll see how strtol() lets us know where the first invalid digit is */
+
+    /* in the next c file... */
 }
