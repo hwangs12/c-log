@@ -18,4 +18,22 @@ int main(void)
     // points to it!
 
     printf("Invalid character: %c\n", *badchar);  // "x"
+
+    /* what if nothing goes wrong? */
+
+    char *t = "3490";  // "x" is not a valid digit in base 10!
+    char *badchr;
+
+    // Convert string s, a number in base 10, to an unsigned long int.
+
+    unsigned long int y = strtoul(t, &badchr, 10);
+
+    // Check if things went well
+
+    if (*badchr == '\0') {
+        printf("Success! %lu\n", y);
+    } else  {
+        printf("Partial conversion: %lu\n", y);
+        printf("Invalid character: %c\n", *badchr);
+    }
 }
