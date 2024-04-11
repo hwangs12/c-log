@@ -13,4 +13,10 @@ int main()
 
     int *const q; // integer pointer const
     q++; // compiler error
+
+    int x = 10;
+    int *const r = &x;
+
+    *r = 20;   // Set "x" to 20, no problem
+
 }
