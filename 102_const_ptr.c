@@ -8,4 +8,9 @@ int main()
     p++;  // We can modify p, no problem
 
     *p = 30; // Compiler error! Can't change what it points to
+
+    // what if we want to change what the pointer points to but not the pointer itself? by changing order
+
+    int *const q; // integer pointer const
+    q++; // compiler error
 }
