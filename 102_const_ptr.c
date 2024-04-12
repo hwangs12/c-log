@@ -19,4 +19,7 @@ int main()
 
     *r = 20;   // Set "x" to 20, no problem
 
+    //  you can also make both const
+    const int *const s;  // Can't modify p or *p!
+
 }
