@@ -10,3 +10,7 @@
  * single instance of variable shared between calls
 */
 
+/**
+ * static in block scope with an initializer will only be * initialized one time on program startup, not each time * the function is called.
+ */
+
