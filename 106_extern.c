@@ -1,6 +1,7 @@
 // foo.c
 #include <stdio.h>
 
+/* you can also put this in the block scope */
 extern int a;
 
 int main(void)
