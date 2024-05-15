@@ -16,8 +16,28 @@ struct fee {
     unsigned char b:1;
 };
 
+/* unsigned ints in struct */
+struct fii {
+    unsigned int a:1;
+    unsigned int b:2;
+    unsigned int c:3;
+    unsigned int d:4;
+};
+
+/* bit splitting */
+struct fuu {
+    unsigned int a:1;
+    unsigned int b:2;
+    unsigned int :0;   // <--Zero-width unnamed bit-field
+    unsigned int c:3;
+    unsigned int d:4;
+};
+
+
 int main(void)
 {
     printf("%zu\n", sizeof(struct foo));
     printf("%zu\n", sizeof(struct fee));
+    printf("%zu\n", sizeof(struct fii));
+    printf("%zu\n", sizeof(struct fuu));
 }
