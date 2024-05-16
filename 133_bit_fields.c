@@ -33,6 +33,20 @@ struct fuu {
     unsigned int d:4;
 };
 
+/* union */
+/* In union, the total memory space allocated is equal to the member with largest size */
+union feu {
+    int a, b, c, d, e, f;
+    float g, h;
+    char i, j, k, l;
+};
+
+/* union */
+struct fut {
+    int a, b, c, d, e, f;
+    float g, h;
+    char i, j, k, l;
+};
 
 int main(void)
 {
@@ -40,4 +54,6 @@ int main(void)
     printf("%zu\n", sizeof(struct fee));
     printf("%zu\n", sizeof(struct fii));
     printf("%zu\n", sizeof(struct fuu));
+    printf("%zu\n", sizeof(union feu));
+    printf("%zu\n", sizeof(struct fut));
 }
