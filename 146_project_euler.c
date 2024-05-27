@@ -6,6 +6,7 @@
  */
 
 #include <stdio.h>
+#include <time.h>
 
 int is_multiple_of_3(int number);
 int is_multiple_of_5(int number);
@@ -13,11 +14,12 @@ int find_sum_below(int number);
 
 int main()
 {
-    int sum1 = find_sum_below(10);
+    clock_t t = clock();
     int sum2 = find_sum_below(1000);
-
-    printf("The sum is %d. \n", sum1);
+    t = clock() - t;
+    double time_taken = ((double) t)/CLOCKS_PER_SEC;
     printf("The sum is %d. \n", sum2);
+    printf("The time it took to compute the sum is %f. \n", time_taken);
 }
 
 int is_multiple_of_3(int number)
