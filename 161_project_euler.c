@@ -47,11 +47,24 @@ int isPalindrome(int number)
     int i = 0;
     while (i < sizeof(str) / 2)
     {
-        
+
     }
+    return 0;
 }
+
+/**
+ * create a function 
+*/
 
 int main()
 {
 
+    char str[10];
+    sprintf(str, "%d", 1234);
+    char str2[11];
+    char str3[12];
+
+    printf("%lu. \n", sizeof str);
+    printf("%lu. \n", sizeof str2);
+    printf("%lu. \n", sizeof str3);
 }
