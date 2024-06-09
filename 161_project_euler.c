@@ -20,6 +20,26 @@
  * low (999 - 100)
 */
 
+/**
+ * finding middle index is tricky
+ * because you have to find for both even and odd
+ * 
+ * idea : if length is 10 middle index is 4 and 5
+ * if length is 9 middle index is 4. 
+ * 
+ * the way it is derived is 10 / 2 +- 1 for even
+ * 9 / 2 and type cast to int for odd. 
+*/
+
+/**
+ * think of way we need to compare each letter
+ * from both ends. 
+ * for length 10, we need to see 10 / 2 and 10 / 2 - 1
+ * are same 
+ * for length 9, we need to see int (9 / 2) - 1 
+ * and int (9 / 2) + 1 are same
+*/
+
 int isPalindrome(int number)
 {
     char str[10];
