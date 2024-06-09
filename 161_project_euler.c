@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
  * A palindromic number reads the same both ways.
@@ -64,7 +65,7 @@ int main()
     char str2[11];
     char str3[12];
 
-    printf("%lu. \n", sizeof str);
+    printf("%lu. \n",  strlen(str));
     printf("%lu. \n", sizeof str2);
     printf("%lu. \n", sizeof str3);
 }
