@@ -46,16 +46,38 @@ int isPalindrome(int number)
     char str[10];
     sprintf(str, "%d", number);
     int i = 0;
-    while (i < sizeof(str) / 2)
+    if (isEven(str))
+    {
+        while (i < strlen(str) / 2)
+        {
+            if (str[i] == str[strlen(str) - i - 1])
+            {
+                i++;
+                continue;
+            } 
+            else
+            {
+                return 0;
+            }
+        }
+
+    }
+    else
     {
 
     }
-    return 0;
+    return 1;
 }
 
 /**
- * create a function 
+ * create a function that measures 
+ * length is even or odd
 */
+
+int isEven(char* numberString)
+{
+    return strlen(numberString) % 2 == 0;
+}
 
 int main()
 {
