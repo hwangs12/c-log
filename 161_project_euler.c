@@ -45,7 +45,10 @@ int isPalindrome(int number)
     char str[10];
     sprintf(str, "%d", number);
     int i = 0;
-    while (i <)
+    while (i < sizeof(str) / 2)
+    {
+        
+    }
 }
 
 int main()
