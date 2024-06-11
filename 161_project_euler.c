@@ -33,6 +33,16 @@
 */
 
 /**
+ * create a function that measures 
+ * length is even or odd
+*/
+
+int isEven(char* numberString)
+{
+    return strlen(numberString) % 2 == 0;
+}
+
+/**
  * think of way we need to compare each letter
  * from both ends. 
  * for length 10, we need to see 10 / 2 and 10 / 2 - 1
@@ -48,7 +58,7 @@ int isPalindrome(int number)
     int i = 0;
     if (isEven(str))
     {
-        while (i < strlen(str) / 2)
+        while (i <= strlen(str) / 2)
         {
             if (str[i] == str[strlen(str) - i - 1])
             {
@@ -64,20 +74,22 @@ int isPalindrome(int number)
     }
     else
     {
-
+        while (i < strlen(str) / 2)
+        {
+            if (str[i] == str[strlen(str) - i - 1])
+            {
+                i++;
+                continue;
+            } 
+            else
+            {
+                return 0;
+            }
+        }
     }
     return 1;
 }
 
-/**
- * create a function that measures 
- * length is even or odd
-*/
-
-int isEven(char* numberString)
-{
-    return strlen(numberString) % 2 == 0;
-}
 
 int main()
 {
@@ -86,8 +98,12 @@ int main()
     sprintf(str, "%d", 1234);
     char str2[11];
     char str3[12];
-
+    int isP1 = isPalindrome(1234);
+    int isP2 = isPalindrome(1221);
     printf("%lu. \n",  strlen(str));
     printf("%lu. \n", sizeof str2);
     printf("%lu. \n", sizeof str3);
+
+    printf("abcd is not palindrome. should be 0 we got %d. \n", isP1);
+    printf("abba is palindrome. should be 1 we got %d. \n", isP2);
 }
