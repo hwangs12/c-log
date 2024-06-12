@@ -93,17 +93,21 @@ int isPalindrome(int number)
 
 int main()
 {
+    int maxPalindrome = 0;;
 
-    char str[10];
-    sprintf(str, "%d", 1234);
-    char str2[11];
-    char str3[12];
-    int isP1 = isPalindrome(1234);
-    int isP2 = isPalindrome(1221);
-    printf("%lu. \n",  strlen(str));
-    printf("%lu. \n", sizeof str2);
-    printf("%lu. \n", sizeof str3);
+    for (int i=999; i > 100; i--)
+    {
+        for (int j=i; j > 100; j--)
+        {
+            if (isPalindrome(i * j))
+            {
+                if (maxPalindrome < i*j)
+                {
+                    maxPalindrome = i * j; 
+                }
+            }
+        }
+    }
 
-    printf("abcd is not palindrome. should be 0 we got %d. \n", isP1);
-    printf("abba is palindrome. should be 1 we got %d. \n", isP2);
+    printf("maximum palindrome %d. \n", maxPalindrome);
 }
