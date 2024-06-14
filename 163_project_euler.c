@@ -21,6 +21,14 @@
  * those factors until all the members become 1.
 */
 
+/**
+ * here's the pattern. starting from 2
+ * 2 can divide anything index 2i+1
+ * once it is done, the next thing it can do is
+ * it can divide at index that's increment of 4
+ * the next it can divide is 8th.
+*/
+
 int main()
 {
 
