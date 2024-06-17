@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <time.h>
 /**
  * 2520 is the smallest number that can be divided by
  * each of the numbers from 1 to 10 without any remainder
@@ -29,7 +31,69 @@
  * the next it can divide is 8th.
 */
 
+/**
+ * let's try different approach
+ * start with 2: you go 2, then 4, ... up until it is
+ * less than 20
+ * start with 3: same logic, you add that to multiplication
+ * remove four from the list because 2 used it up
+ * 5
+ * 7
+ * 11
+ * 13
+ * 17
+ * 19
+ * 
+ * Question is: how do we check not to use 4?
+ */
+
+int isPrime(int number)
+{
+    int win1 = 0;
+    int win2 = 0;
+
+    if (number == 0 || number == 1) // 0 and 1 are not prime
+    {
+        return 0;
+    }
+
+    for (int i = 2; i <= number / 2; i++)
+    {
+        clock_t start = clock();
+        int popo = (i * (number / i)) == number;
+        clock_t end = clock();
+
+        clock_t start1 = clock();
+        int papa = number % i == 0;
+        clock_t end1 = clock();
+
+        double total_t = (double)(end - start) / CLOCKS_PER_SEC;
+        double total_t1 = (double)(end1 - start1) / CLOCKS_PER_SEC;
+
+        
+
+        if (total_t < total_t1)
+        {
+            printf("first calculation is faster.\n");
+            win1++;
+        } else 
+        {
+            win2++;
+        }
+
+
+        if (popo && papa)
+        {
+            return 0;
+        }
+    }
+    
+    printf("FINAL RESULT win1 vs win2 %d : %d \n", win1, win2);
+
+    return 1;
+
+}
+
 int main()
 {
-
 }
