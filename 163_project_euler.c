@@ -74,7 +74,7 @@ int isPrime(int number)
 
         if (total_t < total_t1)
         {
-            printf("first calculation is faster.\n");
+            // printf("first calculation is faster.\n");
             win1++;
         } else 
         {
@@ -82,13 +82,13 @@ int isPrime(int number)
         }
 
 
-        if (popo && papa)
+        if (popo && papa) // no need to do this 
         {
             return 0;
         }
     }
     
-    printf("FINAL RESULT win1 vs win2 %d : %d \n", win1, win2);
+    // printf("FINAL RESULT win1 vs win2 %d : %d \n", win1, win2);
 
     return 1;
 
@@ -96,4 +96,23 @@ int isPrime(int number)
 
 int main()
 {
+    int i = 2;
+    int product = i;
+    while (i <= 20)
+    {
+        if (isPrime(i))
+        {
+            printf("%d\n", i);
+            int multiplier = i;
+            while (i <= 20)
+            {
+                product *= multiplier;
+                i *= i;
+            }
+            i = multiplier;
+        }
+        i++;
+    }
+
+    printf("the product of all numbers under or equal to 20 is %d. \n", product);
 }
