@@ -29,19 +29,34 @@ void add_history(char* unused) {}
 
 int main(int argc, char** argv) {
 
-  puts("Lispy Version 0.0.0.0.1");
+  puts("Lispy Version 0.0.0.0.1. You're running on MAC");
   puts("Press Ctrl+c to Exit\n");
 
   while (1) {
 
     /* Now in either case readline will be correctly defined */
-    char* input = readline("lispy> ");
+    char* input = readline("corgi: ");
     add_history(input);
 
-    printf("No you're a %s\n", input);
+    printf("No you're a %s\n", 3);
     free(input);
 
   }
 
   return 0;
 }
+
+
+/**
+ * Q: What happens when you pass printf a variable that does
+ * not match the pattern?
+ * 
+ * A: Trying integer on string pattern:
+ * Get a warning in compilation step. When running:
+ * get segmentation fault
+ * 
+ * Q: If _WIN32 is defined on windows.
+ * What is defined for Linux or Mac?
+ * 
+ * A: MAC: __APPLE__, LINUX: __linux__
+ */
