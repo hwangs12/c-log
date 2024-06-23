@@ -16,31 +16,21 @@
 
 int is_prime(long int numberInput)
 {
-    int prime_counter = 0;
+    int original = numberInput;
     // remove evenness
     while (numberInput % 2 == 0)
     {
-        printf("%d \t", 2);
-        prime_counter++;
-        if (prime_counter > 2)
-        {
-            goto finish;
-        }
+        // printf("%d \t", 2);
         numberInput /= 2;
     }
 
 
 
-    for (long int i=3; i < sqrt(numberInput); i+=2)
+    for (long int i=3; i <= sqrt(numberInput); i+=2)
     {
         while (numberInput % i == 0)
         {
-            prime_counter++;
-            if (prime_counter > 2)
-            {
-                goto finish;
-            }
-            printf("%ld \t", i);
+            // printf("%ld \t", i);
             numberInput /= i;
 
         }
@@ -48,22 +38,23 @@ int is_prime(long int numberInput)
 
     if (numberInput >= sqrt(numberInput))
     {
-        printf("%ld \n", numberInput);
+        // printf("%ld \n", numberInput);
     }
 
-    finish:
-
-    return prime_counter <= 2;
+    return numberInput == original;
 }
 
 int main()
 {
-    for (int i=2; i<10; i++)
+    int i = 3;
+    int prime_counter = 1;
+    while (prime_counter != 10001)
     {
         if (is_prime(i))
         {
-            printf("%d is prime. \n", i);
-        }
+            printf("%d is prime \n", i);
+            prime_counter++;
+        };
+        i++;
     }
-
 }
