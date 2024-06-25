@@ -22,7 +22,7 @@ int main()
     printf("please input number here: ");
     scanf("%s", arr);
     int i = 0;
-    char currMax[13];
+    int currMaxIndex = 0;
     
     while (i < 1000)
     {
