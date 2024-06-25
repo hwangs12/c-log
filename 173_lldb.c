@@ -20,4 +20,10 @@
  * 
  * expr y = countNegValues(list, num)
  * if countNegValues are defined
+ * 
+ * in doc 172, try to set breakpoint at line 44
+ * and let it point to a valid value such as &x
+ * 
+ * enter c to let it continue running, and it should finish
+ * without crashing
  */
