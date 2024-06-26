@@ -28,9 +28,10 @@ int main()
     scanf("%s", arr);
     int i = 0;
     int currMaxIndex = 0;
-    
-    while (i < 1000)
+    // 12345
+    // 13, 24, 35
+    while (i < 987)
     {
-
+        printf("%d -- %d", arr[i], arr[i+13]);
     }
 }
