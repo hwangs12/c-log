@@ -32,7 +32,7 @@ int main()
     // 13, 24, 35
     while (i < 987)
     {
-        printf("%d -- %d \n", arr[i] - '0', arr[i+13] - '0');
+        printf("%d -- %d \n", arr[i] - '0', arr[i+12] - '0');
         i++;
     }
 }
