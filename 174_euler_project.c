@@ -30,7 +30,7 @@ int main()
     int currMaxIndex = 0;
     // 12345
     // 13, 24, 35
-    while (i < 987)
+    while (i < 988)
     {
         printf("%d -- %d \n", arr[i] - '0', arr[i+12] - '0');
         i++;
