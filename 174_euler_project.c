@@ -35,4 +35,17 @@ int main()
         printf("%d -- %d \n", arr[i] - '0', arr[i+12] - '0');
         i++;
     }
+    // we want to start small
+    // save begin and end of 13 adjacent numbers
+    // then compare with the next one
+    // we don't know the full product but
+    // given, if begin and end is 7, and 3 
+    // let's say product for this one is x
+    // next adj number has begin and end 3 and 0
+    // then product for the adj number is
+    // x / 7 * 0 = 0 hence, definitely small
+    // 0 is special. we can jump all the way to index
+    // that's after 0 since every product will be 0
+    // up until that point
+    // 
 }
