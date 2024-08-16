@@ -48,4 +48,14 @@ int main()
     // that's after 0 since every product will be 0
     // up until that point
     // 
+
+    // then, we compare last saved value, to the new one
+    // is it inevitable we need to have product here?
+    // ok let's just have product ready and compare
+    // so first of all, i would cut off the 'line' until
+    // 0 appears, add where index is at 0 by 13. Since 
+    // every product up to that point is 0
+    // 
+
+    //
 }
