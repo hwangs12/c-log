@@ -55,7 +55,7 @@ int main()
     // so first of all, i would cut off the 'line' until
     // 0 appears, add where index is at 0 by 13. Since 
     // every product up to that point is 0
-    // 
+    // 12345601234123412341234 ex) all the product is 0
 
-    //
+    // 
 }
