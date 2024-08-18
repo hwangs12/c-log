@@ -57,5 +57,8 @@ int main()
     // every product up to that point is 0
     // 12345601234123412341234 ex) all the product is 0
 
-    // 
+    // so we have two things to check: where 0 is and where max is
+
+    // checking 0 works like this: if 0 appears within counter 13, we increase the index by 13 and start anew
+    // max value
 }
