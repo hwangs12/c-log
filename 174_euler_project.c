@@ -27,13 +27,28 @@ int main()
     printf("please input number here: ");
     scanf("%s", arr);
     int i = 0;
+    int product = 1;
     int currMaxIndex = 0;
     // 12345
     // 13, 24, 35
-    while (i < 988)
+    /* while (i < 988)
     {
         printf("%d -- %d \n", arr[i] - '0', arr[i+12] - '0');
+        product *= arr[i];
+
+        // brute force
+
         i++;
+    } */
+
+    for (int i=0; i<988; i++) 
+    {
+        for (int j=i; j<i+4; j++) 
+        {
+            product *= arr[j];
+        }
+        printf("product is %d \n", product);
+        product = 1;
     }
     // we want to start small
     // save begin and end of 13 adjacent numbers
@@ -60,5 +75,6 @@ int main()
     // so we have two things to check: where 0 is and where max is
 
     // checking 0 works like this: if 0 appears within counter 13, we increase the index by 13 and start anew
-    // max value
+    // max value: no meaning in checking if index at 0 appears is less than or equal to 13. 
+    // 
 }
