@@ -43,9 +43,9 @@ int main()
 
     for (int i=0; i<988; i++) 
     {
-        for (int j=i; j<i+4; j++) 
+        for (int j=i; j<i+13; j++) 
         {
-            product *= arr[j];
+            product *= arr[j] - '0';
         }
         printf("product is %d \n", product);
         product = 1;
