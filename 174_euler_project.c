@@ -27,8 +27,8 @@ int main()
     printf("please input number here: ");
     scanf("%s", arr);
     int i = 0;
-    int product = 1;
-    int currMaxIndex = 0;
+    long long int product = 1;
+    long long int currMax = 0;
     // 12345
     // 13, 24, 35
     /* while (i < 988)
@@ -47,7 +47,11 @@ int main()
         {
             product *= arr[j] - '0';
         }
-        printf("product is %d \n", product);
+        if (currMax < product)
+        {
+            currMax = product;
+        }
+        printf("product is %lld and currMax is %lld\n", product, currMax);
         product = 1;
     }
     // we want to start small
