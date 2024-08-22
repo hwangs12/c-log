@@ -20,10 +20,10 @@ int main()
     {
         while (a < b && b < 499)
         {
-            while (499 < c && c < 998)
+            while (b < c && c < 998)
             {
                 printf("a = %d, b = %d, c = %d \n", a, b, c);
-                printf("a^2 + b^2 = %d, and c^2 is %d \n", a*a+b*b, c*c);
+                // printf("a^2 + b^2 = %d, and c^2 is %d \n", a*a+b*b, c*c);
                 if (a*a + b*b != c*c)
                 {
                     b++;
@@ -31,13 +31,17 @@ int main()
                 } 
                 else
                 {
-                    break;
+                    goto pythagorean;
                 }
             }
+            a++;
+            b=a+1;
+            c=1000-a-b;
         }
     }
 
-    printf("hooray!!! a = %d, b = %d, c = %d \n", a, b, c);
+    pythagorean:
+        printf("%d\n", a*b*c);
     
 
     return 0;
