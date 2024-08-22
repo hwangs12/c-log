@@ -16,13 +16,14 @@ int main()
     int a=1;
     int b=2;
     int c=997;
-    while (a < 1000)
+    while (a < 333)
     {
-        while (a < b && b < 1000)
+        while (a < b && b < 499)
         {
-            while (b < c && c < 1000)
+            while (499 < c && c < 998)
             {
                 printf("a = %d, b = %d, c = %d \n", a, b, c);
+                printf("a^2 + b^2 = %d, and c^2 is %d \n", a*a+b*b, c*c);
                 if (a*a + b*b != c*c)
                 {
                     b++;
@@ -33,9 +34,6 @@ int main()
                     break;
                 }
             }
-            a++;
-            b=a+1;
-            c=1000-a-b;
         }
     }
 
