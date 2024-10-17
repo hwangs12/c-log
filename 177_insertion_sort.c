@@ -18,12 +18,15 @@
     key = A[2] = 2
     j = 2 - 1 = 1;
     while 1 > 0 and A[1] (5) > 2;
-        A[2] = A[1] = 5;
+        A[2] = A[1] = 5; // replace j+1 index with bigger one
         j = 1 - 1 = 0 (exit the loop)
-    A[1] = 2; // assign with the lower one. [2, 5]
+    A[1] = 2; // assign with the lower one. [2, 5, 4, 6, 1, 3]
 
     i = 3;
     key = A[3] = 4;
+    j = 3 - 1 = 2;
+    while 2 > 0 and A[2] = 5 > key=4
+        A[3] = 
 
 
  */
