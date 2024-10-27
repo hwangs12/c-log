@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 // input: a1, a2, a3, ..., an
 // output: a'1, a'2, a'3,  ... , a'n where a'i >= a'i-1
 
@@ -74,8 +76,27 @@
 
 /* SOLUTIONS */
 
-int * sort(int * a) {
-    for (int i = 0; i < sizeof(a) / sizeof(*a); i++) {
-        
+void sort(int a[]) {
+    for (int i = 1; i < 6; i++) {
+        int key = a[i];
+        int j = i - 1;
+        while (j >= 0 && a[j] > key) {
+            a[j+1] = a[j];
+            j = j - 1;
+        }
+        a[j+1] = key;
     }
+    for (int k = 0; k < 6; k++) {
+        printf("%d, ", a[k]);
+    }
+}
+
+int main()
+{
+    int b[6] = {3, 5, 6, 7, 1, 2};
+    int c[6] = {12, 13, 5, 2, 7, 3};
+
+    sort(b);
+    sort(c);
+
 }
