@@ -23,6 +23,6 @@ int main()
 
     add_binary_integers(a, b, c, 10);
     for (int i = 0; i < 10; i++) {
-        printf('hey i\'m c %d element: value is %d', i, c[i]);
+        printf("hey i\'m c %d element: value is %d \n", i, c[i]);
     }
 }
