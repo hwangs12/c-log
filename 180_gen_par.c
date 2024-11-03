@@ -8,9 +8,16 @@
  * (())()
  * ()(())
  * ()()()
+ * 
+ * n = 2
+ * (())
+ * ()()
+ * 
+ * n = 1
+ * ()
  */
 
 char** generateParenthesis(int n, int* returnSize)
 {
-    
+    // we can make basic
 }
