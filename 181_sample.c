@@ -17,6 +17,8 @@ void _printParenthesis(int pos, int n, int open, int close)
 {
     static char str[MAX_SIZE];
 
+    printf("i'm %s p: %d, o: %d, c: %d \n", str, pos, open, close);
+
     if (close == n) {
         printf("%s \n", str);
         return;
