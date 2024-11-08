@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> //#include is directive
 
 int main(void)
 {
@@ -9,7 +9,7 @@ int main(void)
 }
 
 /**
- * Identify the directives and statements in the program.
+ * Identify the directives and statements in the program
  * What output does the program produce?
  * Parkinson's Law:
  * Work expands so as to fill the time
