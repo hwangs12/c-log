@@ -9,7 +9,7 @@ int main(void)
 }
 
 /**
- * Identify the directives and statements in the program
+ * Identify the directives and statements in the program. All the things inside main is statements.
  * What output does the program produce?
  * Parkinson's Law:
  * Work expands so as to fill the time
